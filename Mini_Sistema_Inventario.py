@@ -113,9 +113,7 @@ def mostrar_inventario():
     print("------\t------\t\t------\t--------\t\t-------------")
     for id, datos in producto.items():
         valor_total = producto[id]['cantidad'] * producto[id]['precio']
-        print(f"{id}\t{datos['nombre']}\t\t\t{datos['cantidad']}\t${datos['precio']:.2f}\t${valor_total}")
-    print()
-
+        print(f"{id}\t\t{datos['nombre']}\t\t\t{datos['cantidad']}\t\t${datos['precio']:.2f}\t\t${valor_total}")
 
 while True:
     print("1. Agregar producto \n"

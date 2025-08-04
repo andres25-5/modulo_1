@@ -17,6 +17,17 @@ saldo = 0.0
 
 
 def depositar():
+    """
+    Esta funcion permite al usuario depositar dinero en su cuenta
+    actualizando el saldo disponible.
+
+    Args:
+        monto (float): Monto a depositar en la cuenta.
+
+    Returns:
+        str: Mensaje de confirmación del depósito y el nuevo saldo.
+        str: Mensaje de error si el monto es menor o igual a cero.
+    """
     global saldo  # Declaramos que usaremos la variable global 'saldo'
     print("---------------------")
     monto = float(input("Ingrese el monto a depositar: $ "))
@@ -29,6 +40,15 @@ def depositar():
 
 
 def consultar_saldo():
+    """
+    Esta funcion permite al usuario consultar su saldo actual
+    mostrando el monto disponible en su cuenta.
+    Args:
+        saldo (float): Monto disponible en la cuenta.
+
+    Returns:
+        str: Mensaje que muestra el saldo actual.
+    """
     global saldo
     print("-----------------------------------------")
     print("|\t\t\t\t\t\t\t\t\t\t|")
@@ -40,6 +60,18 @@ def consultar_saldo():
 
 
 def retirar():
+    """
+    Esta funcion permite al usuario retirar dinero de su cuenta
+    actualizando el saldo disponible si hay fondos suficientes.
+
+    Args:
+        saldo (float): Monto disponible en la cuenta.
+        saldo_retiro (float): Monto a retirar de la cuenta.
+
+    Returns:
+        str: Mensaje de confirmación del retiro y el nuevo saldo.
+        str: Mensaje de error si el monto es mayor al saldo disponible o menor o igual a cero.
+    """
     global saldo
     print("---------------------")
     saldo_retiro = float(input("Ingrese el monto a retirar: $ "))
